@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,700');
+
+:root {
+    --grey: #757575;
+    --red: #e74c3c;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--grey);
+    border: none;
+    outline: none;
+}
+
+.rotate-container {
+    width: 90px;
+    height: 90px;
+    position:  relative;
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    margin: auto;
+    align-items: center;
+}
+
+.rotate-container img {
+    margin: auto;
+}
+
+.col-item hr,
+.carousel-item hr{
+    width: 40px;
+    margin-top:  18px;
+    border-top: 2px solid var(--grey);
+}
+
+.rotate {
+    width: 72px;
+    height: 72px;
+    border: 1px solid #d6d6d6;
+    border-radius: 1px;
+    position:  absolute;
+}
+
+.col-item .rotate{
+    transition: border .5s, transform .5s;
+}
+
+.col-item:hover .rotate{
+    border: 1px solid var(--red);
+    transform: rotate(45deg);
+    border-radius: 3px;
+}
+
+.col-item:hover .title {
+    color: var(--red)
+}
+
+.col-item .title,
+.carousel-item .title{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    transition: color .5s;
+}
+
+.portfolio {
+    margin-top: 220px;
+    text-align: center;
+}
+
+.portfolio .padding-sm {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.lines {
+    display: flex;
+    margin: auto auto 50px;
+    width: 230px;
+}
+
+.lines hr {
+    width: 80px;
+    margin: auto;
+    border-top: 2px solid var(--grey);
+}
+
+.lines .circle {
+    background: var(--red);
+    border-radius: 8px;
+    width: 8px;
+    height: 8px;
+}
+
+.ul-container {
+    display: flex;
+    margin-bottom: 35px;
+}
+
+#myTab {
+    margin: auto;
+    border: none;
+}
+
+
+.nav-tabs .nav-link {
+    color: var(--grey);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: var(--red);
+}
+
+.all-tab {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#myTabContent img{
+    width: 100%;
+}
+
+.portfolio [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item::after {
+    content: " / ";
+    position: absolute;
+    top: 7px;
+    right: -3px;
+    z-index: 100;
+}
+
+.nav-item:last-child::after {
+    content: '';
+}
+
+.who-we-are,
+.case-study {
+    text-align: center;
+    padding-top: 140px;
+    padding-bottom: 125px;
+}
+
+.who-we-are {
+    padding-bottom: 0;
+}
+
+.case-study {
+    background: #f4f5f9;
+}
+
+.who-we-are .description{
+    font-size: 12px;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container .hover-effect {
+    background: var(--red);
+    transition: 1s;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+}
+
+.img-container:hover .hover-effect {
+    opacity: 0.8;
+}
+
+.text {
+    font-size: 24px;
+}
+
+.hover-effect hr {
+    border-top: 3px solid white;
+    width: 45px;
+    margin-left: 0;
+}
+
+.wrapper {
+    left: 45px;
+    bottom: 45px;
+    position: absolute;
+}
+
+.case-study .container {
+    background: url('../img/bg-img.png') no-repeat right top;
+    height: 730px;
+    align-items: center;
+}
+
+.case-study .padding-sm{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#carousel {
+    height: 620px;
+    background: #ffffff;
+    position: relative;
+    box-shadow: 0 0 6px 2px #0000002b;
+}
+
+#carousel button {
+    margin-top: 37px;
+    position: relative;
+    background: var(--red);
+}
+
+#carousel .carousel-indicators {
+    padding-bottom: 25px;
+}
+
+.carousel-item {
+    height: 450px;
+}
+
+.red-square {
+    margin: 82px auto auto;
+    width: 72px;
+    height: 72px;
+    background: var(--red);
+    border-radius: 1px;
+    transform: rotate(45deg);
+}
+
+.item-content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.item-content img {
+    position: relative;
+    bottom: 46px;
+}
+
+.carousel-indicators .active {
+    background-color: var(--red);
+}
+
+.carousel-indicators li {
+    background-color: #d6d7db;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    display: none;
+}
+
+.carousel-item .description {
+    padding: 0 45px;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.modal-wrapper button.read-more-btn {
+    color: white;
+    font-size: 12px;
+    background: var(--red);
+}
+
+.custom-file-label {
+    overflow: hidden;
+}
+
+.help-block.with-errors{
+     color: red;
+ }
+
+.check-out-stats {
+    background: url('../img/background.png') no-repeat center;
+    height: 530px;
+}
+
+.check-out-stats .circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 110px;
+    border: 2px solid white;
+    display: flex!important;
+    margin: auto;
+}
+
+.check-out-stats .circle img {
+    margin: auto;
+}
+
+.check-out-stats p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+.check-out-stats .large-text {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+
+.check-out-stats .row {
+    padding-top: 150px;
+}
+
+.case-study .row {
+    padding-top: 45px;
+}
+
+@media (max-width: 575.98px) {
+    .case-study .container {
+        background: none;
+    }
+
+    .who-we-are,
+    .case-study {
+        padding-top: 30px;
+    }
+
+    .portfolio {
+        margin-top: 15px;
+    }
+
+    #carousel {
+        height: 680px;
+    }
+
+    #carousel .carousel-item .description {
+        line-height: 28px;
+    }
+
+    #carousel .carousel-inner {
+        height: 520px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #carousel .carousel-item .description {
+        line-height: 25px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .check-out-stats .row {
+        padding-top: 50px;
+    }
+
+    .check-out-stats .large-text {
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .check-out-stats .circle {
+        display: none!important;
+    }
+
+    .check-out-stats {
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
